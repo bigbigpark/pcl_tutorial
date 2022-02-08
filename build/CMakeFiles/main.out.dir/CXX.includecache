@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mrl/big_vscode/tutorial/pcl/add.cpp
+add.h
+/home/mrl/big_vscode/tutorial/pcl/add.h
+
+/home/mrl/big_vscode/tutorial/pcl/add.h
+
+/home/mrl/big_vscode/tutorial/pcl/main.cpp
+iostream
+-
+add.h
+/home/mrl/big_vscode/tutorial/pcl/add.h
+
