@@ -1,37 +1,50 @@
 #include <iostream>
+#include <pcl/point_cloud.h> // for PointClooud
+#include <pcl/point_types.h>
+#include <pcl/ModelCoefficients.h>
+#include <pcl/filters/project_inliers.h>
 
-#include <pcl/io/pcd_io.h>  // pcl::PCDReader, pcl::PCDWriter 여기 포함
-#include <pcl/point_types.h>  // PassThrough, VoxelGrid 여기 포함
-#include <pcl/filters/statistical_outlier_removal.h> // StatisticalOutlierRemoval 여기 포함
+#include <pcl/io/pcd_io.h>
 
 using namespace std;
 
 int main(int argc, char** argv)
 {
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
-  pcl::PointCloud<pcl::PointXYZ>::Ptr cloudFiltered (new pcl::PointCloud<pcl::PointXYZ>);
+  pcl::PointCloud<pcl::PointXYZ>::Ptr cloudProjected (new pcl::PointCloud<pcl::PointXYZ>);
 
+  // Fill in the data
+  cloud->width = 100;
+  cloud->height = 1;
+  cloud->points.resize(cloud->width * cloud->height);
 
-  // // Read the pcd file
-  pcl::PCDReader reader;
+  for (auto& point: *cloud)
+  {
+    point.x = 1024 * rand() / (RAND_MAX + 1.0f);
+    point.y = 1024 * rand() / (RAND_MAX + 1.0f);
+    point.z = 1024 * rand() / (RAND_MAX + 1.0f);
+  }
+  
+  // Create planar coefficients
+  // MODEL: ax + by + cz + d = 0;
+  // In this tutorial, a = 0, b = 0, c = 1, d = 0
+  pcl::ModelCoefficients::Ptr coeff (new pcl::ModelCoefficients);
+  coeff->values.resize(4);
+  coeff->values[0] = 0;
+  coeff->values[1] = 0;
+  coeff->values[2] = 1;
+  coeff->values[3] = 0;
 
-  reader.read("../data/tutorials/table_scene_lms400.pcd", *cloud);
+  // Create filtering object
+  pcl::ProjectInliers<pcl::PointXYZ> proj;
+  proj.setModelType(pcl::SACMODEL_PLANE);
+  proj.setInputCloud(cloud);
+  proj.setModelCoefficients (coeff);
+  proj.filter(*cloudProjected);
 
-  // Create filtering obejct
-  pcl::StatisticalOutlierRemoval<pcl::PointXYZ> sor;
-  sor.setInputCloud(cloud);
-  sor.setMeanK(50);
-  sor.setStddevMulThresh (1.0);
-  sor.filter(*cloudFiltered);
-
-
-  // Write
   pcl::PCDWriter writer;
-  writer.write("../data/tutorials/table_scene_lms400_inlier.pcd", *cloudFiltered, false);
-
-  sor.setNegative(true);
-  sor.filter(*cloudFiltered);
-  writer.write("../data/tutorials/table_scene_lms400_outlier.pcd", *cloudFiltered, false);
+  writer.write("../before_proj.pcd",*cloud);
+  writer.write("../after_proj.pcd",*cloudProjected);
 
   return 0;
 }
