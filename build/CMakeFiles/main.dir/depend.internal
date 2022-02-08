@@ -261,10 +261,14 @@ CMakeFiles/main.dir/src/main.cpp.o
  /usr/include/pcl-1.8/pcl/correspondence.h
  /usr/include/pcl-1.8/pcl/exceptions.h
  /usr/include/pcl-1.8/pcl/filters/boost.h
+ /usr/include/pcl-1.8/pcl/filters/extract_indices.h
  /usr/include/pcl-1.8/pcl/filters/filter.h
+ /usr/include/pcl-1.8/pcl/filters/filter_indices.h
+ /usr/include/pcl-1.8/pcl/filters/impl/extract_indices.hpp
  /usr/include/pcl-1.8/pcl/filters/impl/filter.hpp
- /usr/include/pcl-1.8/pcl/filters/impl/project_inliers.hpp
- /usr/include/pcl-1.8/pcl/filters/project_inliers.h
+ /usr/include/pcl-1.8/pcl/filters/impl/filter_indices.hpp
+ /usr/include/pcl-1.8/pcl/filters/impl/voxel_grid.hpp
+ /usr/include/pcl-1.8/pcl/filters/voxel_grid.h
  /usr/include/pcl-1.8/pcl/for_each_type.h
  /usr/include/pcl-1.8/pcl/impl/cloud_iterator.hpp
  /usr/include/pcl-1.8/pcl/impl/pcl_base.hpp
@@ -284,7 +288,15 @@ CMakeFiles/main.dir/src/main.cpp.o
  /usr/include/pcl-1.8/pcl/register_point_struct.h
  /usr/include/pcl-1.8/pcl/sample_consensus/boost.h
  /usr/include/pcl-1.8/pcl/sample_consensus/eigen.h
+ /usr/include/pcl-1.8/pcl/sample_consensus/impl/lmeds.hpp
+ /usr/include/pcl-1.8/pcl/sample_consensus/impl/mlesac.hpp
+ /usr/include/pcl-1.8/pcl/sample_consensus/impl/msac.hpp
+ /usr/include/pcl-1.8/pcl/sample_consensus/impl/prosac.hpp
+ /usr/include/pcl-1.8/pcl/sample_consensus/impl/ransac.hpp
+ /usr/include/pcl-1.8/pcl/sample_consensus/impl/rmsac.hpp
+ /usr/include/pcl-1.8/pcl/sample_consensus/impl/rransac.hpp
  /usr/include/pcl-1.8/pcl/sample_consensus/impl/sac_model_circle.hpp
+ /usr/include/pcl-1.8/pcl/sample_consensus/impl/sac_model_circle3d.hpp
  /usr/include/pcl-1.8/pcl/sample_consensus/impl/sac_model_cone.hpp
  /usr/include/pcl-1.8/pcl/sample_consensus/impl/sac_model_cylinder.hpp
  /usr/include/pcl-1.8/pcl/sample_consensus/impl/sac_model_line.hpp
@@ -296,9 +308,20 @@ CMakeFiles/main.dir/src/main.cpp.o
  /usr/include/pcl-1.8/pcl/sample_consensus/impl/sac_model_perpendicular_plane.hpp
  /usr/include/pcl-1.8/pcl/sample_consensus/impl/sac_model_plane.hpp
  /usr/include/pcl-1.8/pcl/sample_consensus/impl/sac_model_sphere.hpp
+ /usr/include/pcl-1.8/pcl/sample_consensus/impl/sac_model_stick.hpp
+ /usr/include/pcl-1.8/pcl/sample_consensus/lmeds.h
+ /usr/include/pcl-1.8/pcl/sample_consensus/method_types.h
+ /usr/include/pcl-1.8/pcl/sample_consensus/mlesac.h
  /usr/include/pcl-1.8/pcl/sample_consensus/model_types.h
+ /usr/include/pcl-1.8/pcl/sample_consensus/msac.h
+ /usr/include/pcl-1.8/pcl/sample_consensus/prosac.h
+ /usr/include/pcl-1.8/pcl/sample_consensus/ransac.h
+ /usr/include/pcl-1.8/pcl/sample_consensus/rmsac.h
+ /usr/include/pcl-1.8/pcl/sample_consensus/rransac.h
+ /usr/include/pcl-1.8/pcl/sample_consensus/sac.h
  /usr/include/pcl-1.8/pcl/sample_consensus/sac_model.h
  /usr/include/pcl-1.8/pcl/sample_consensus/sac_model_circle.h
+ /usr/include/pcl-1.8/pcl/sample_consensus/sac_model_circle3d.h
  /usr/include/pcl-1.8/pcl/sample_consensus/sac_model_cone.h
  /usr/include/pcl-1.8/pcl/sample_consensus/sac_model_cylinder.h
  /usr/include/pcl-1.8/pcl/sample_consensus/sac_model_line.h
@@ -310,8 +333,11 @@ CMakeFiles/main.dir/src/main.cpp.o
  /usr/include/pcl-1.8/pcl/sample_consensus/sac_model_perpendicular_plane.h
  /usr/include/pcl-1.8/pcl/sample_consensus/sac_model_plane.h
  /usr/include/pcl-1.8/pcl/sample_consensus/sac_model_sphere.h
+ /usr/include/pcl-1.8/pcl/sample_consensus/sac_model_stick.h
  /usr/include/pcl-1.8/pcl/search/impl/search.hpp
  /usr/include/pcl-1.8/pcl/search/search.h
+ /usr/include/pcl-1.8/pcl/segmentation/impl/sac_segmentation.hpp
+ /usr/include/pcl-1.8/pcl/segmentation/sac_segmentation.h
  /usr/include/x86_64-linux-gnu/bits/mman-linux.h
  /usr/include/x86_64-linux-gnu/bits/mman-shared.h
  /usr/include/x86_64-linux-gnu/bits/mman.h
