@@ -1,5 +1,3 @@
-~~~c++
-
 #include <iostream>
 #include <pcl/point_types.h>
 #include <pcl/filters/passthrough.h>
@@ -33,6 +31,3 @@ int main(int argc, char** argv)
   
   return 0;
 }
-
-
-+++

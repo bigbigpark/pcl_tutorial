@@ -1,5 +1,3 @@
-~~~c++
-
 #include <iostream>
 #include <pcl/kdtree/kdtree_flann.h>
 #include <pcl/point_cloud.h>
@@ -79,6 +77,3 @@ int main(int argc, char** argv)
 
   return 0;
 }
-
-
-~~~

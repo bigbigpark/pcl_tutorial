@@ -1,5 +1,3 @@
-~~~c++
-
 #include <iostream>
 
 #include <pcl/io/pcd_io.h>  // pcl::PCDReader, pcl::PCDWriter 여기 포함
@@ -37,6 +35,3 @@ int main(int argc, char** argv)
 
   return 0;
 }
-
-
-~~~

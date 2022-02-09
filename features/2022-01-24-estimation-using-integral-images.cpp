@@ -1,5 +1,3 @@
-~~~c++
-
 #include <iostream>
 #include <tic_toc.h>
 #include <pcl/io/pcd_io.h>
@@ -55,5 +53,3 @@ int main(int argc, char** argv)
   
   return 0;
 }
-
-~~~

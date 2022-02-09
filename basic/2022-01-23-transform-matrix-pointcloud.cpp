@@ -1,5 +1,3 @@
-~~~c++
-
 #include <iostream>
 #include <pcl/console/parse.h>
 #include <pcl/point_cloud.h>
@@ -119,5 +117,3 @@ int main(int argc, char** argv)
   
   return 0;
 }
-
-~~~

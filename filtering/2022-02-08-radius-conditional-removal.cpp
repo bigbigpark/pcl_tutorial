@@ -1,4 +1,5 @@
 
+/*
 For the `RadiusOutlierRemovel` <br/>
 옵션으로 `-r` 무조건 추가해주자
 
@@ -10,9 +11,7 @@ For the `ConditionalRemoval` <br/>
 옵션으로 `-c` 무조건 추가해주자
 
 <br/>
-
-~~~c++
-
+*/
 #include <iostream>
 
 #include <pcl/point_types.h>
@@ -90,6 +89,3 @@ int main(int argc, char** argv)
 
   return 0;
 }
-
-
-~~~
